@@ -1,0 +1,8 @@
+sudo nano /etc/fstab
+
+//<NAS_IP>/<FOLDER> /home/pi/myNAS cifs username=<USERNAME>,password=<PASSWORD>,domain=<SERVER>,users,auto,user_xattr 0 0
+
+in contab -e
+* * * * * /home/pi/cameraStill2.sh 2>&1
+5 * * * * mv /home/pi/camera/* /home/pi/myNAS/camera/
+
